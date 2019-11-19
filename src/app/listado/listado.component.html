@@ -1,0 +1,34 @@
+
+<!--<div class="card">
+    <img [src]="this.alumno.foto" style="width:25%"/>
+
+    <h1  appDirAtr>{{this.alumno.nombre}} </h1>
+    <p appDirAtr  *appDirEst="1" > {{this.alumno.descripcion}}</p>
+    <div *ngFor="let a of alumnoServ.listadoAlumnos">{{a.nombre}}</div>
+     
+    <button (click)="this.cambiarDatos()" class="info">Cambiar datos</button>
+    <button (click)="this.restaurarDatos()" class="warning">Restaurar datos</button>
+</div>-->
+    <table class="table" style="margin-top:20px;">
+        <th style="text-align:center;">Acciones</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Descripcion</th>
+        <th>DNI</th>
+        <th>Email</th>
+        <tr *ngFor="let alumno of alumnoServ.listadoAlumnos">
+        <td><div style="text-align: center;">
+            <button type="button" class="btn btn-warning" style="margin:10px;" (click)="editarAlumno(alumno)">
+            Editar</button>
+            <button type="button" class="btn btn-danger" style="margin:10px;" (click)="alumnoServ.eliminar(alumno)">
+            Eliminar</button>        
+        </div>
+        </td>
+        <td hidden>{{alumno.id}}</td>
+        <td>{{alumno.nombre}}</td>        
+        <td>{{alumno.apellido}}</td>
+        <td>{{alumno.descripcion}}</td>
+        <td>{{alumno.dni}}</td>
+        <td>{{alumno.email}}</td>
+        </tr>
+    </table>

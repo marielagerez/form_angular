@@ -1,0 +1,37 @@
+<div class="container">
+<form class="form-control" [formGroup] = "formGroupAlumno" (ngSubmit)="guardarAlumno()">
+   <div class="form-group">
+    <label>Nombre</label>
+    <input  class="form-control" formControlName="nombre" name="nombre">
+    <div *ngIf="formGroupAlumno.controls.nombre.invalid && formGroupAlumno.controls.nombre.touched ">
+        El Nombre no es valido
+    </div>
+   </div> 
+   <div class="form-group">  
+     <label class="control-label">Apellido</label>
+     <input class="form-control" formControlName="apellido" name="apellido">
+     <div *ngIf="formGroupAlumno.controls.apellido.invalid && formGroupAlumno.controls.apellido.touched ">
+        El Apellido no es valido
+    </div>
+   </div> 
+    <div class="form-group">  
+     <label>Descripcion</label>
+     <input class="form-control" formControlName="descripcion" name="descripcion">
+    </div> 
+    <div class="form-group">  
+     <label>DNI</label>
+     <input class="form-control" formControlName="dni" name="dni">
+     <div *ngIf="formGroupAlumno.controls.dni.invalid && formGroupAlumno.controls.dni.touched ">
+        El DNI no es valido
+    </div>
+    </div> 
+     <div class="form-group">  
+    <label>Email</label> 
+    <input  class="form-control" formControlName="email" name="email">
+    <div *ngIf="formGroupAlumno.controls.email.invalid && formGroupAlumno.controls.email.touched ">
+            El email no es valido
+    </div>
+    </div>
+    <button type="submit" [disabled]="formGroupAlumno.invalid">Enviar</button>
+</form> 
+</div>
