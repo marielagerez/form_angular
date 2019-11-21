@@ -20,10 +20,11 @@
     </div> 
     <div class="form-group">  
      <label>DNI</label>
-     <input class="form-control" formControlName="dni" name="dni">
-     <div *ngIf="formGroupAlumno.controls.dni.invalid && formGroupAlumno.controls.dni.touched ">
+    <!-- <input  [(ngModel)]="this.alumnoServ.alumno.dni" class="form-control" >-->
+     <input  class="form-control" formControlName="dni" name="dni">
+        <div *ngIf="formGroupAlumno.controls.dni.invalid && formGroupAlumno.controls.dni.touched ">
         El DNI no es valido
-    </div>
+    </div> 
     </div> 
      <div class="form-group">  
     <label>Email</label> 

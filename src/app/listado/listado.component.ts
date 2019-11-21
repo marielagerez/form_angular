@@ -41,6 +41,10 @@ export class ListadoComponent implements OnInit {
     this.alumno.foto="https://robohash.org/jperez"
   }
 
+  public manejarCambiosPadre(parametro){
+    console.log("llego el evento desde el hijo"+JSON.stringify(parametro));
+  }
+
 
   constructor( public listadoLogger:LogService , public _router:Router, public alumnoServ:ListadoalumnoService ) { 
 

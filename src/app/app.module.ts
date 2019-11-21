@@ -8,11 +8,12 @@ import { ListadoComponent } from './listado/listado.component';
 import { DirAtrDirective } from './directives/dir-atr.directive';
 import { DirEstDirective } from './directives/dir-est.directive';
 import { FormAlumnoComponent } from './form-alumno/form-alumno.component';
+import { AlumnoComponent } from './alumno/alumno.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, ListadoComponent, DirAtrDirective, DirEstDirective, FormAlumnoComponent
+    AppComponent, ListadoComponent, DirAtrDirective, DirEstDirective, FormAlumnoComponent, AlumnoComponent
   ],
   imports: [
     BrowserModule,

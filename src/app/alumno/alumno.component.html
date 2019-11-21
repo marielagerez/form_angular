@@ -1,0 +1,16 @@
+<!-- <td><div style="text-align: center;">
+    <button type="button" class="btn btn-warning" style="margin:10px;" (click)="editarAlumno(alumno)">
+    Editar</button>
+    <button type="button" class="btn btn-danger" style="margin:10px;" (click)="alumnoServ.eliminar(alumno)">
+    Eliminar</button>        
+</div>
+</td>-->
+<tr>
+<td hidden>{{alumnoHijo.id}}</td>
+<td>{{alumnoHijo.nombre}}</td>        
+<td>{{alumnoHijo.apellido}}</td>
+<td>{{alumnoHijo.descripcion}}</td>
+<td>{{alumnoHijo.dni}}</td>
+<td>{{alumnoHijo.email}}</td>
+ <button type="button" class="btn btn-danger" style="margin:10px;" (click)="emitirCambios(alumnoHijo)">
+EnviarEvento</button>      </tr>
