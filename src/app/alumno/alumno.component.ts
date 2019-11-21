@@ -12,6 +12,7 @@ export class AlumnoComponent implements OnInit {
   @Output() onChange= new EventEmitter();
 
   public emitirCambios(alumno:Alumno){
+
 	this.onChange.emit(alumno); //le va a enviar 
 
   }
